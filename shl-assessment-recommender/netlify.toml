@@ -1,0 +1,13 @@
+[build]
+  command = "bun run build"
+  publish = ".next"
+
+[functions]
+  node_bundler = "esbuild"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+[build.environment]
+  NETLIFY_NEXT_PLUGIN_SKIP = "true"
+  NEXT_PUBLIC_BASE_URL = "https://shl-assessment-recommender.netlify.app"
